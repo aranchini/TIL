@@ -6,7 +6,7 @@
   * Hot reload(핫 리로드)를 지원합니다.
     > Hot reload란 개발자가 앱의 코드를 수정한 후 변경 사항을 즉시 반영하는데 사용됩니다.
 
-# 2. Fiutter의 장단점
+# 2. Flutter의 장단점
 
   ### Flutter
   ___
