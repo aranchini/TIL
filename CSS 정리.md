@@ -63,6 +63,15 @@ CSS의 기본 문법은 **선택자(selector)** 와
     input:focus { border: 2px solid blue; }
     ```
     등이 있음
+- 가상 요소<br>
+    1. 내용 앞에 추가
+    ```
+    p::before{content:"주의!";}
+    ```
+    2. 내용 뒤에 추가
+    ```
+    p::after{content:"끝";}
+    ```
 
 6. 조합(복합)선택자
     - 여러개의 선택자를 조합하거나 그룹화하여 복잡한 조건에 맞추거나 코드 중복을 줄일수있음
@@ -83,7 +92,7 @@ CSS의 기본 문법은 **선택자(selector)** 와
 - 자식 선택자 (>)
     - 부모 바로 아래에 있는 직계 자식만 선택함<br>
     ```
-    ul > li{liststyle: none}
+    ul > li{list-style: none;}
     ```
 - 후손 선택자(공백)
     - 부모 안에 포함된 모든 하위 요소를 선택함.<br><br>
@@ -147,3 +156,9 @@ CSS의 기본 문법은 **선택자(selector)** 와
     background-attachment: fixed;     스크롤 시 배경 고정 여부 
     }
     ```
+
+## Box Model
+
+1. **margin**
+2. **padding**
+3. **border**
