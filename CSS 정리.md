@@ -11,11 +11,11 @@ CSS의 기본 문법은 **선택자(selector)** 와
 > 이는 HTML 태그 이름,클래스,ID 등이 될수 있음
 
 **선언 블록**
-- 중괄호 {}안에 위치함
+- 중괄호 { }안에 위치함
 - 하나 이상의 선언 포함
 - 각 선언은 속성과 값으로 구성됨 
-- 콜론(:)으로 구분함
-- 여러 개의 선언은 세미콜론(;)으로 구분함
+- 콜론( : )으로 구분함
+- 여러 개의 선언은 세미콜론( ; )으로 구분함
 
 ## 선택자
 스타일을 적용할 HTML 요소를 지정하는데 사용됨.<br>
@@ -53,9 +53,97 @@ CSS의 기본 문법은 **선택자(selector)** 와
     ```
 5. 가상 클래스 선택자 및 가상 요소 선택자
     - 특별한 상태의 HTML요소나 페이지의 일부분에 스타일을 적용하려 할때 사용함
+- 가상 클래스 <br>
+    1. 마우스 커서를 올렸을 때
+    ```
+    a:hover{color:orange;}
+    ```
+    2. 포커스를 올렸을 때
+    ```
+    input:focus { border: 2px solid blue; }
+    ```
+    등이 있음
 
 6. 조합(복합)선택자
     - 여러개의 선택자를 조합하거나 그룹화하여 복잡한 조건에 맞추거나 코드 중복을 줄일수있음
+- 그룹 선택자
+    - 여러 요소에 같은 스타일을 동시에 적용할 때 쉼표( , )로 구분 함
+    ```
+    h1,h2,p{text-align:center;}
+    ```
+- 교차(일치 선택자)
+    - 선택자들을 붙여 써서 모든 조건을 동시에 만족하는 요소 선택.<br><br>
+    <i>클래스가 error인 p 태그만 적용</i>
+    ```
+    p.error{color:red;}
+    ```
+    
 7. 계층적인 선택자
     - 자식,후손,형제,인접 등과 같은 계층적 관계에 따라 HTML요소들을 대응할 수 있음
+- 자식 선택자 (>)
+    - 부모 바로 아래에 있는 직계 자식만 선택함<br>
+    ```
+    ul > li{liststyle: none}
+    ```
+- 후손 선택자(공백)
+    - 부모 안에 포함된 모든 하위 요소를 선택함.<br><br>
+    <i>div 안의 모든 p태그</i>
+    ```
+    div p{color:gray;} 
+    ```
+
+- 인접 형제 선택자(+)
+    - 특정 요소 바로 뒤에 오는 형제 요소 하나만 선택.<br><br>
+    <i>h1 바로 다음에 오는 p 요소 딱 하나만 선택</i>
+    ```
+    h1+p{margin-top:0;}
+    ```
     
+
+- 일반 형제 선택자(~)
+    - 특정 요소 뒤에 오는 모든 형제 요소들을 선택함<br><br>
+
+    <i>h1 뒤에 나오는 p 요소들을 한꺼번에 선택</i>
+    ```
+    h1~p{color:blue;}
+    ```
+## 기초 스타일링
+
+1. **글꼴 속성**
+
+    ```
+    body{
+        
+    font-family:"나눔 고딕","궁서체"; 글꼴 설정 (없을 경우 대비해 대체글꼴 지정)
+    font-size: 16px;                글자 크기 (px, em, rem 등 사용)
+    font-weight: bold;              글자 두께 (normal, bold, 100~900)
+    font-style: italic;             글자 기울임 
+    line-height: 1.5;               줄 간격 (보통 1.4 ~ 1.6이 가독성이 좋음)
+    text-align: center;             텍스트 정렬 (left, center, right, justify)
+    text-decoration: none;          밑줄 등 장식 제거 (a 태그 밑줄 없앨 때 필수) 
+    }
+    ```
+
+2. **색상 속성**
+
+    ```
+    h1 {
+    color: red;            글자 색상 (색상 이름)
+    color: #ff0000;        16진수 코드 (Hex) 
+    color: rgb(255, 0, 0); RGB 값
+    opacity: 0.5;          요소 전체의 투명도 (0: 투명 ~ 1: 불투명)
+    }
+    ```
+
+3. **배경 속성**
+
+    ```
+    .container {
+    background-color: #f4f4f4;        배경 색상
+     background-image: url('bg.jpg'); 배경 이미지 경로
+     background-repeat: no-repeat;    배경 반복 여부 (repeat, no-repeat) 
+    background-size: cover;           이미지 크기 (cover: 꽉 채우기, contain: 다 보이게) 
+    background-position: center;      배경 이미지 위치 (center, top, bottom 등) 
+    background-attachment: fixed;     스크롤 시 배경 고정 여부 
+    }
+    ```
