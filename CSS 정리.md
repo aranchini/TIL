@@ -190,3 +190,4 @@ div {
   border-radius: 10px;    /* 모서리를 둥글게 */
 }
 ```
+
