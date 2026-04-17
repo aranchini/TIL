@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기 소개 만들기!</title>
 <style>
-h3{color:purple;
+h3{
+    background: lightpink;
+    color:purple;
     text-align: center;}
 .mbti{color:blue;}
 div.box{
@@ -17,7 +19,9 @@ div.box{
     border-width:5px;
     padding:20px;
 }
-h3{font-family: "궁서체", sans-serif;}
+h1{background: lightsalmon;
+    font-family: "궁서체", sans-serif;
+    text-align: center;}
 li:hover{background-color: yellowgreen;}
 
 .goora{color:blue;
@@ -29,25 +33,46 @@ position: relative;}
 }
 .goora:active::after
 {
-    content: "사실 이건 가짜링크 입니다ㅋㅋ";
+    content: "사실 이건 가짜링크 입니다ㅋㅋ              아래 있는 깃허브는 진짜에요..ㅎ";
     display: table;
     color:purple;
     font-weight: bold;
     text-decoration:none !important;
     margin-top: 10px;
 }
-
+#name{background: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+ul{
+    background:#afafff;
+}
+ul li{background:#E2E2F0}
+#insta{background: lightpink;
+    color:purple;
+    text-align: center;
+    font-family: "궁서체", sans-serif;}
+img {
+    display: block;    
+    margin: 10px 0;    
+    width: 200px;     
+    height: auto;
+}
+#ad{text-align: left;}
 </style>
 </head>
 <body>
-<h3>안녕하세용가리 자기소개를 해보도록 하겠습니다람쥐</h3>
+<h1>안녕하세용가리 자기소개를 해보도록 하겠습니다람쥐</h1>
 <hr>
 <strong>제일 기본적인 것!!!</strong><br>
+<p id="name">
 저의 이름은 무엇일까요?<br>
 <input type="radio" name="name" value="1">1. 서아린<br>
 <input type="radio" name="name" value="2">2. 서아란<br>
 <input type="radio" name="name" value="3">3. 서아랑<br>
 <input type="radio" name="name" value="4">4. 서하란<br>
+</p>
 
 <p>정답을 알고 싶다면 
     <span title="정답은 서아란 입니다!"><span style="color:blue;">여기에</span>마우스를 올려주세요!</span>
@@ -62,8 +87,19 @@ position: relative;}
     <li>친구들과 놀기</li>
     <li>가끔 삘 받을때 독서...?</li>
 </ul>
-<p>제 인스타를 알려드릴게여<br>
-    <div class="goora" style="display: inline-block;">https://www.instegram.com/xran_7ixu/</span><br></p><br>
+<p id="ad"><h2 id="insta">저의 인스타를 알려 드릴게요!!!!!! 아래 링크를 눌러주세요</h2>
+    <img src="인스타.jpg" width="400px" height="400px"><br>
+    <div class="goora" style="display: inline-block;">https://www.instegram.com/xran_7ixu/</div><br></p><br>
+
+<p id="ad">제 깃허브 주소도 알려드릴게영
+<img src="깃허브.jpg"><br>
+    <a href="https://github.com/aranchini" width="400px" height="400px" target="_blank">https://github.com/aranchini</a>
+</p>
+<h2><details>
+    <summary>마지막으로 이곳을 눌러주세요!</summary>
+    <p>아직 처음이라 이상한 곳도 많고 잘 못해서 좀 많이 짧지만..잘할수 있도록 더 노력하겠습니다!!</p>
+</details></h2>
+&copy;aranchini 2026 04 17
 
 </body>
 </html>
