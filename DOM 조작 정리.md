@@ -48,3 +48,7 @@ titleElement.textContent = '안녕하세요';
     - **역할 및 특징**: 요소 내부의 **HTML 태그를 포함한 내용**을 읽거나 변경함
     - **추가 정보**:
         1. 동적으로 HTML구조(태그 포함)를 생성하고 삽입할 떄 유용함
+        2. 사용자가 입력한 데이터를 `innerHTML`에 바로 대입하면 보안 취약점(XSS,Cross-Site Scripting)이 발생할 수 있어 주의가 필요
+```
+container.innerHTML = '<p>새로운 문단입니다.</p>';
+```
